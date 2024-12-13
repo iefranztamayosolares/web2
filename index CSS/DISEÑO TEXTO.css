@@ -1,0 +1,27 @@
+h3 {
+    font-size: 15px;
+    font-weight: bold;
+    color: #f5e400;
+    margin-bottom: 20px;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+h1 {
+    font-size: 20px;
+    font-weight: bold;
+    color: #d10000;
+    margin-bottom: 20px;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+
+p {
+    
+    font-size: 15px;
+    color: #ffffff;
+    text-align: justify;
+    padding: 1px;
+}

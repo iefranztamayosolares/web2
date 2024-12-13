@@ -1,0 +1,8 @@
+body {
+    background-image: url('IMAGENES/FONDO WEB.jpg');
+    background-size: cover; /* Para que la imagen cubra toda la pantalla */
+    background-position: center; /* Para centrar la imagen */
+    background-attachment: fixed; /* Para que la imagen quede fija al hacer scroll */
+    height: 100vh; /* Asegura que cubra toda la altura de la pantalla */
+    margin: 0; /* Elimina el margen por defecto */
+}

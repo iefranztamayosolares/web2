@@ -1,0 +1,60 @@
+/* Estilos para el contenedor de las tarjetas */
+.left-panel {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Distribuye en columnas ajustadas al espacio */
+    gap: 15px;
+    width: 100%;
+    max-width: 1200px; /* Ancho máximo para pantallas grandes */
+    margin: 0 auto; /* Centra el contenedor horizontalmente */
+    padding: 20px;
+    justify-content: center; /* Centra el contenido dentro del panel izquierdo */
+}
+
+/* Estilos para cada tarjeta */
+.box {
+    background-color: #000000;
+    color: #43d300;
+    padding: 20px;
+    text-align: center;
+    font-weight: bold;
+    border: 2px solid #ebd409;
+    border-radius: 8px;
+    transition: background-color 0.3s, transform 0.3s;
+    box-shadow: 0 4px 8px rgb(0, 0, 0);
+    min-height: 120px; /* Altura mínima para que todas las tarjetas se vean iguales */
+    display: flex;
+    align-items: center; /* Centra verticalmente */
+    justify-content: center; /* Centra horizontalmente */
+    text-decoration: none;
+    font-family: 'Baloo 2', cursive;
+}
+.box:hover {
+    background-color: #585858; /* Cambia el color de fondo */
+    color: #ebd409; /* Cambia el color del texto */
+    transform: scale(1.05); /* Hace que la caja crezca ligeramente */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5); /* Aumenta la sombra */
+}
+
+/* Para pantallas medianas (tablets y laptops pequeñas) */
+@media (max-width: 992px) {
+    .left-panel {
+        grid-template-columns: repeat(3, 1fr); /* Tres columnas en pantallas medianas */
+    }
+}
+
+/* Para pantallas pequeñas (smartphones) */
+@media (max-width: 768px) {
+    .left-panel {
+        grid-template-columns: repeat(2, 1fr); /* Dos columnas en pantallas pequeñas */
+    }
+}
+
+/* Para pantallas muy pequeñas (teléfonos más pequeños) */
+@media (max-width: 480px) {
+    .left-panel {
+        grid-template-columns: repeat(2, 1fr); /* Dos columnas en pantallas muy pequeñas también */
+        padding: 0px;
+        gap: 10px;
+        margin-left: -2.5px;
+    }
+}

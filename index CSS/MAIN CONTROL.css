@@ -1,0 +1,105 @@
+
+/* Contenedor principal con paneles */
+.content-panels {
+    display: flex;
+    flex-wrap: wrap; /* Permite que los elementos se ajusten en columnas en pantallas pequeñas */
+    padding: 40px;
+    gap: 20px;
+    max-width: 1200px;
+    margin: 100px auto;
+    background-color: rgba(255, 255, 255, 0.658);
+    border-radius: 16px; /* Bordes más redondeados */
+    box-shadow: 0 6px 24px rgba(0, 0, 0, 0.1); /* Sombra más suave y difusa */
+    overflow: hidden;
+    transition: all 0.3s ease; /* Transición suave en todo el contenedor */
+}
+
+/* Estilo de texto dentro de los paneles */
+.content-panels .panel h3 {
+    font-size: 1.6em;
+    color: #333;
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+
+/* Responsividad para pantallas medianas (tablet) */
+@media (max-width: 900px) {
+    .content-panels .panel {
+        flex-basis: calc(50% - 20px); /* Dos columnas en pantallas medianas */
+    }
+}
+
+/* Responsividad para pantallas pequeñas (móviles) */
+@media (max-width: 600px) {
+    .content-panels .panel {
+        flex-basis: 100%; /* Una columna en pantallas móviles */
+    }
+    .content-panels {
+        padding: 20px;
+    }
+}
+
+
+
+.RESEÑA-HISTORICA {
+    display: flex;
+    flex-wrap: wrap; /* Permite que los elementos se ajusten en columnas en pantallas pequeñas */
+    padding: 20px;
+    gap: 20px;
+    max-width: 1200px;
+    margin: 100px auto;
+    background-color: rgba(0, 0, 0, 0.664);
+    border-radius: 12px; /* Bordes redondeados para el contenedor principal */
+    box-shadow: 0 4px 12px rgb(0, 0, 0); /* Sombra sutil */
+    margin-top: -30px;
+}
+
+/* Estilo para el contenedor principal del video */
+.youtube {
+    display: flex;
+    justify-content: center; /* Centra el contenido dentro del contenedor */
+    padding: 20px;
+    gap: 20px;
+    max-width: 800px; /* Limita el ancho máximo en pantallas grandes */
+    margin: 100px auto; /* Centra el contenedor y agrega margen superior */
+    background-color: #ffffffb2; /* Fondo blanco para el main */
+    border-radius: 12px; /* Bordes redondeados para el contenedor principal */
+    box-shadow: 0 4px 12px rgb(0, 0, 0); /* Sombra sutil */
+    margin-top: -30px;
+}
+
+/* Estilo para el iframe del video */
+.youtube iframe {
+    width: 720px; /* El iframe ocupa el 100% del ancho disponible */
+    height: 480px; /* Ajusta la altura proporcionalmente al ancho */
+    max-width: 720px; /* Limita el ancho máximo del video a 720px */
+    border-radius: 8px; /* Bordes redondeados para el iframe */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra sutil para el video */
+}
+
+/* Estilos responsivos */
+
+/* Para pantallas pequeñas y medianas (por ejemplo, dispositivos móviles y tabletas) */
+@media (max-width: 768px) {
+    .youtube {
+        padding: 15px; /* Reducir el padding en pantallas pequeñas */
+        max-width: 100%; /* El contenedor puede ocupar el 100% en pantallas más pequeñas */
+    }
+
+    .youtube iframe {
+        max-width: 100%; /* Asegura que el video ocupe el 100% del ancho disponible */
+        height: 400px; /* Ajustar la altura en pantallas pequeñas */
+    }
+}
+
+/* Para pantallas muy pequeñas (dispositivos móviles) */
+@media (max-width: 480px) {
+    .youtube {
+        padding: 10px; /* Reducir aún más el padding en pantallas muy pequeñas */
+    }
+
+    .youtube iframe {
+        height: 300px; /* Ajustar la altura para pantallas más pequeñas */
+    }
+}

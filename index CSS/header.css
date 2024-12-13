@@ -1,0 +1,116 @@
+/* Estilos generales */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Arial", sans-serif;
+}
+
+.header {
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgb(0, 0, 0); /* Rojo oscuro */
+    padding: 10px 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 8px rgb(209, 1, 1); /* Sombreado inferior */
+
+}
+header a:hover {
+    color: #E97B34;             /* Hover en naranja */
+    background-color: #a01111;  /* Fondo gris oscuro */
+    border-radius: 5px;
+  }
+header a {             
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px 15px;
+  }
+.header .logotipo {
+    color: #fff;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.menu-icon {
+    display: none;
+    font-size: 24px;
+    color: #fff;
+    cursor: pointer;
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+}
+
+.menu ul {
+    display: flex;
+    list-style: none;
+}
+
+.menu ul li {
+    margin-left: 20px;
+}
+
+.menu ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+/* Estilos del menú lateral en pantallas pequeñas */
+@media (max-width: 768px) {
+    .menu-icon {
+        display: block;
+    }
+
+    .menu {
+        position: fixed;
+        top: 0;
+        left: -250px; /* Desplazado fuera de la pantalla */
+        width: 250px;
+        height: 100vh;
+        background: linear-gradient(#000000, #a01111);
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        padding-top: 20px;
+        transition: left 0.3s ease;
+    }
+
+    .menu ul {
+        flex-direction: column;
+        width: 100%;
+        padding-left: 20px;
+    }
+
+    .menu ul li {
+        margin: 20px 0;
+    }
+
+    .menu ul li a {
+        font-size: 20px;
+        color: #fff;
+    }
+
+    /* Ocultamos el checkbox */
+    #menu-toggle {
+        display: none;
+    }
+
+    #menu-toggle:checked + .menu-icon + .menu {
+        left: 0; /* Muestra el menú cuando el icono es clickeado */
+    }
+}
+
+/* Ocultar el checkbox en pantallas grandes (no responsivas) */
+@media (min-width: 769px) {
+    #menu-toggle {
+        display: none;
+    }
+}

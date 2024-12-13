@@ -1,0 +1,59 @@
+/* Estilo del footer */
+footer {
+    background-color: #000000;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    width: 100%; /* Asegura que ocupe todo el ancho */
+    position: relative;
+    bottom: 0;
+    margin-top: 100px; /* Hace que el footer siempre esté al final */
+    box-sizing: border-box; /* Asegura que el padding no añada más ancho */
+    
+}
+footer p{
+    font-size: 20px;
+    text-align: center;
+}
+
+/* Asegura que el body no tenga márgenes */
+body {
+    margin: 0; /* Elimina márgenes del body para evitar espacios en los costados */
+    padding: 0;
+}
+
+/* Estilo para los elementos dentro del footer */
+footer h1, footer p {
+    margin: 10px 0;
+}
+
+/* Estilos Responsivos */
+@media (max-width: 768px) {
+    footer {
+        padding: 15px;
+    }
+
+    footer h1 {
+        font-size: 18px;
+    }
+
+    footer p {
+        font-size: 14px;
+        text-align: center;
+    }
+}
+
+@media (max-width: 480px) {
+    footer {
+        padding: 10px;
+    }
+
+    footer h1 {
+        font-size: 16px;
+    }
+
+    footer p {
+        font-size: 12px;
+        text-align: center;
+    }
+}

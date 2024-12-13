@@ -1,0 +1,139 @@
+.carousel-section {
+    display: flex;
+    flex-wrap: wrap; /* Permite que los elementos se ajusten en columnas si es necesario */
+    padding: 0;
+    gap: 0;
+    max-width: 1200px; /* Mantener el ancho máximo */
+    margin: 120px auto -80px;
+    background-color: #000000;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgb(0, 0, 0);
+}
+
+.carousel {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    margin: 0px auto;
+}
+
+.carousel-images {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.carousel-images img {
+    width: 100%;
+    flex-shrink: 0;
+    object-fit: cover; /* Mantiene la proporción sin deformar */
+    height: 100%; /* Las imágenes ocupan el 100% del contenedor sin deformarse */
+}
+
+.carousel-control {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.863);
+    color: #a01111;
+    border: none;
+    font-size: 2em;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 10;
+}
+
+.carousel-control.prev {
+    left: 10px;
+}
+
+.carousel-control.next {
+    right: 10px;
+}
+
+.carousel-indicators {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.indicator {
+    height: 12px;
+    width: 12px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 50%;
+    display: inline-block;
+    margin: 0 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.indicator.active, .indicator:hover {
+    background-color: rgb(255, 0, 0);
+}
+
+/* Para pantallas grandes (escritorios y laptops) */
+@media (min-width: 1025px) {
+    .carousel-images img {
+        height: 700px; /* Mantener la altura en pantallas grandes */
+    }
+}
+
+/* Para pantallas de tablet (1024px o menos) */
+@media (max-width: 1024px) {
+    .carousel-images img {
+        height: 500px; /* Ajustar la altura de las imágenes para tabletas */
+    }
+
+    .carousel-control {
+        font-size: 1.8em; /* Ajustar tamaño de los controles */
+        padding: 12px;
+    }
+
+    .indicator {
+        height: 12px;
+        width: 12px;
+    }
+}
+
+/* Para pantallas de móvil (768px o menos) */
+@media (max-width: 768px) {
+    .carousel-section {
+        margin: 120px auto -80px; /* Ajuste del margen en pantallas más pequeñas */
+    }
+
+    .carousel-images img {
+        height: 350px; /* Ajuste de la altura de las imágenes para móviles */
+    }
+
+    .carousel-control {
+        font-size: 1.5em; /* Controles más pequeños */
+        padding: 8px;
+    }
+
+    .indicator {
+        height: 10px;
+        width: 10px;
+    }
+}
+
+/* Para pantallas más pequeñas (480px o menos) */
+@media (max-width: 480px) {
+    .carousel-section {
+        margin: 120px auto -60px;
+        border-radius: 8px; /* Bordes menos pronunciados en pantallas pequeñas */
+    }
+
+    .carousel-images img {
+        height: 250px; /* Ajuste aún más la altura para pantallas más pequeñas */
+    }
+
+    .carousel-control {
+        font-size: 1.2em; /* Reducir aún más los controles */
+        padding: 5px;
+    }
+
+    .indicator {
+        height: 8px;
+        width: 8px;
+    }
+}
